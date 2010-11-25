@@ -1,0 +1,6 @@
+The minimal form implementation of C-start up function and Linker script. The a.c and  cstartup.c are compile separately upto the 3rd phase ie
+msp430-gcc -c a.c -o a.o
+msp430-gcc -c -mmcu=msp430x2013 -c cstartup.c -o cstartup.o
+
+and link it using the link script script.x
+msp430-ld -T script.x cstartup.o a.o
